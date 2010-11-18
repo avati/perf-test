@@ -20,10 +20,9 @@ function emptydirs_create()
 {
     mkdir -p $PG/emptydirs;
 
+    mkdir -p $PG/emptydirs/tmp.{1..$emptytops};
     for top in $(seq 1 $emptytops); do
-        for dir in $(seq 1 $emptydirs); do
-            mkdir -p $PG/emptydirs/top.$top/dir.$dir;
-        done
+        mkdir -p $PG/emptydirs/top.$top/dir.{1..$emptydirs};
     done
 }
 
@@ -116,8 +115,10 @@ function crawl_create_recurse()
     fi
 
     depth=$(($depth - 1));
+
+    mkdir -p $subpath/dir.{1..$crawlwidth};
+
     for i in $(seq 1 $crawlwidth); do
-	mkdir -p $subpath/dir.$i;
 	crawl_create_recurse "$subpath/dir.$i" $depth;
     done
 }
