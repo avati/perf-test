@@ -22,7 +22,7 @@ function emptydirs_create()
 
     for top in $(seq 1 $emptytops); do
         for dir in $(seq 1 $emptydirs); do
-            mkdir -p $PG/emptydirs/top/dir.$i;
+            mkdir -p $PG/emptydirs/top.$top/dir.$dir;
         done
     done
 }
