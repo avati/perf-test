@@ -233,7 +233,7 @@ function _init()
     TSTDOUT=251
     TSTDERR=252
     LOGFD=253
-    LOGFILE=$(tempfile)
+    LOGFILE=/tmp/perf$$
 
     eval "exec $TSTDOUT>&1"
     eval "exec $TSTDERR>&2"
