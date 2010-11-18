@@ -217,8 +217,8 @@ function params_init()
     largecount=16K;
 
     crawlwidth=10;
-    crawldepth=3;
-    leafcount=10000;
+    crawldepth=4;
+    leafcount=100;
 
     smallblob=;
     for i in $(seq 1 $smallblock); do
