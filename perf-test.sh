@@ -161,8 +161,8 @@ function run_tests()
     run emptyfiles_delete;
 
 
-    run emptydirs_create;
-    run emptydirs_delete;
+    # run emptydirs_create;
+    # run emptydirs_delete;
 
 
     run smallfiles_create;
