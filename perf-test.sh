@@ -217,7 +217,7 @@ function params_init()
     largecount=16K;
 
     crawlwidth=10;
-    crawldepth=4;
+    crawldepth=3;
     leafcount=100;
 
     smallblob=;
