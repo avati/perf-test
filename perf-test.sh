@@ -265,7 +265,7 @@ function wrap()
 function measure()
 {
     set -o pipefail;
-    (time -p wrap "$@") 2>&1 >/dev/null | tail -n 3 | head -n 1 | cut -f2 -d' '
+    (time -p wrap "$@") >/dev/null 2>&1 | tail -n 3 | head -n 1 | cut -f2 -d' '
 }
 
 
