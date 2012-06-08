@@ -51,8 +51,9 @@ function smallfiles_rewrite()
 function smallfiles_read()
 {
     for i in $(seq 1 $smallfilecount); do
-	cat $PG/smallfiles/file.$i > /dev/null
-    done
+	echo $PG/smallfiles/file.$i
+    done | xargs cat > /dev/null
+
 }
 
 
